@@ -36,20 +36,20 @@ public class StreamsAndExpressions {
         }
 
         // 17 Preview
-        switch (input) {
-            case null -> System.out.println("Null");
-            case String string -> System.out.println("String: " + string);
-            case Integer integer -> System.out.println("Integer: " + integer);
-            case Double doublePrecision -> {
-                System.out.println("Double: " + doublePrecision);
-            }
-            default -> System.out.println("Default");
-        }
-
-        var re = switch (input) {
-            case null -> 42;
-            case String value -> Integer.parseInt(value);
-            default -> 0;
-        };
+//        switch (input) {
+//            case null -> System.out.println("Null");
+//            case String string -> System.out.println("String: " + string);
+//            case Integer integer -> System.out.println("Integer: " + integer);
+//            case Double doublePrecision -> {
+//                System.out.println("Double: " + doublePrecision);
+//            }
+//            default -> System.out.println("Default");
+//        }
+//
+//        var re = switch (input) {
+//            case null -> 42;
+//            case String value -> Integer.parseInt(value);
+//            default -> 0;
+//        };
     }
 }

@@ -3,3 +3,4 @@ spring:
     name: demo
 testapp:
   token: 1231233
+

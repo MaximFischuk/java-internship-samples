@@ -8,5 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class TestProperties {
 
     public String token;
+    public String accessKey;
+    public Integer someNumber;
 
 }
