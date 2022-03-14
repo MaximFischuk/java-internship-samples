@@ -5,12 +5,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 @SpringBootApplication
 @EnableConfigurationProperties
 @RequiredArgsConstructor
-@RefreshScope
 public class DemoApplication {
 
     private final TestProperties properties;

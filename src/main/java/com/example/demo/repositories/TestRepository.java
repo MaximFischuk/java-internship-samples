@@ -5,11 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface TestRepository extends CrudRepository <Object, Integer> {
-    Optional<Object> findByNameAndSurname(String name, String surname);
+public interface TestRepository extends CrudRepository <TestData, Integer> {
+    Optional<TestData> findByNameAndSurname(String name, String surname);
 
-//    @Query("select * from test where name = :name and surname = :surname")
-
-    @Query("select * from test where custom_column = :str")
-    Object custom(String str);
 }

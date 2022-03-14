@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
 @RequiredArgsConstructor
 public class TestController {
 
-    final public Object bean;
+//    final public Object bean;
     final public TestProperties properties;
 
     public CompletableFuture<String> getObject() {

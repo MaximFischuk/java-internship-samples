@@ -3,9 +3,9 @@ spring:
     name: our-demo-app
   cloud:
     config:
-      uri: ${CONFIG_SERVER_ENDPOINT}
+      uri: ${CONFIG_SERVER_ENDPOINT:''}
       profile: prod
-      label: ${CONFIG_LABEL}
+      label: ${CONFIG_LABEL:''}
       enabled: false
 #    vault:
 #      host: ${HASHICORP_VAULT_HOST}

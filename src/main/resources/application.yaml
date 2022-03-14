@@ -1,6 +1,33 @@
 spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+  flyway:
+    enabled: false
   application:
     name: demo
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        basic-producer-out-0:
+          destination: my.topic.basic
+        basic-consumer-in-0:
+          destination: my.topic.basic
+          group: "${spring.application.name}"
+        basic-processor-out-0:
+          destination: my.topic.strings
+        basic-processor-in-0:
+          destination: my.topic.nums
+          group: "${spring.application.name}"
+    function:
+      definition: basic-producer;basic-consumer;basic-processor
 testapp:
   token: 1231233
 
