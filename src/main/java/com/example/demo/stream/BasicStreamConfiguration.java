@@ -27,7 +27,7 @@ public class BasicStreamConfiguration {
     }
 
     @Bean("basic-consumer")
-    public Consumer<String> basicConsumer(){
+    public Consumer<BasicMessage> basicConsumer(){
         return (value) -> log.info("Consumer Received : " + value);
     }
 
